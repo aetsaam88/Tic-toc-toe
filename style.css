@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f9;
+  padding: 20px; }
+
+.game-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  background: white;
+  border: 2px solid #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  aspect-ratio: 1 / 1; 
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+#message {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+button {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .cell {
+    font-size: 1.8rem;
+  }
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .cell {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .cell {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .cell {
+    font-size: 2.5rem;
+  }
+}
